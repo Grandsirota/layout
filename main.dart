@@ -45,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: const Text("My CIS"),
         backgroundColor: Theme.of(context).colorScheme.primaryContainer,
       ),
-      body: Container(
+      body: SizedBox(
         width: double.infinity,
         child: ListView(
           children: data.map((student) {
@@ -111,7 +111,7 @@ class Student {
 class StudentDetailPage extends StatelessWidget {
   final Student student;
 
-  StudentDetailPage({required this.student});
+  const StudentDetailPage({super.key, required this.student});
 
   @override
   Widget build(BuildContext context) {
@@ -134,15 +134,15 @@ class StudentDetailPage extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             Text(
               student.name,
-              style: TextStyle(fontSize: 24),
+              style: const TextStyle(fontSize: 24),
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Text(
               student.id,
-              style: TextStyle(fontSize: 18),
+              style: const TextStyle(fontSize: 18),
             ),
           ],
         ),
