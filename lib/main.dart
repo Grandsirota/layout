@@ -157,9 +157,16 @@ class StudentListPage extends StatelessWidget {
               child: Row(
                 children: [
                   ClipOval(
-                    child: SizedBox(
+                    child: Container(
                       width: 60,
                       height: 60,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        border: Border.all(
+                          color: Colors.black, // สีของกรอบวงกลม
+                          width: 2, // ความหนาของกรอบวงกลม
+                        ),
+                      ),
                       child: Image.asset(
                         'assets/images/Freljord_Crest_icon.png',
                         fit: BoxFit.cover,
@@ -213,9 +220,16 @@ class StudentDetailPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ClipOval(
-              child: SizedBox(
+              child: Container(
                 width: 120,
                 height: 120,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(
+                    color: Colors.black, // สีของกรอบวงกลม
+                    width: 2, // ความหนาของกรอบวงกลม
+                  ),
+                ),
                 child: Image.asset(
                   'assets/images/Freljord_Crest_icon.png',
                   fit: BoxFit.cover,
